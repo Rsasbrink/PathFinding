@@ -1,0 +1,5 @@
+These projects contain the basis for the assignments. Example solutions can be found in the solutions project.
+
+Please make sure that you keep any IDE specific files out of the repository by adjusting the '.gitignore' file!
+
+The original code from the book has been added as a GIT submodule. It is added as a symbolic link in the projects that need it. The folder 'src/main/java/edu' is added to a project specific '.gitignore' file in order to prevent the source files to be included in our repository. By having the symbolic link to the original code creation of ZIP files for the students is very easy. (Just export the project as a ZIP file and only include the 'pom.xml' file and the source folder.)
