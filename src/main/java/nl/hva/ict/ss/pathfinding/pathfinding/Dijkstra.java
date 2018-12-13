@@ -76,8 +76,7 @@ public class Dijkstra {
     private void relax(DirectedEdge e) {
         int v = e.from(), w = e.to();
         if (distTo[w] > distTo[v] + e.weight()) {
-                    dijkstraCounter++;
-
+            dijkstraCounter++;
             distTo[w] = distTo[v] + e.weight();
             edgeTo[w] = e;
             if (pq.contains(w)) {
@@ -141,7 +140,7 @@ public class Dijkstra {
 
         // check that edge weights are nonnegative
         for (DirectedEdge e : G.edges()) {
-                    dijkstraCounter++;
+            dijkstraCounter++;
 
             if (e.weight() < 0) {
                 System.err.println("negative edge weight detected");
@@ -151,13 +150,13 @@ public class Dijkstra {
 
         // check that distTo[v] and edgeTo[v] are consistent
         if (distTo[s] != 0.0 || edgeTo[s] != null) {
-                    dijkstraCounter++;
+            dijkstraCounter++;
 
             System.err.println("distTo[s] and edgeTo[s] inconsistent");
             return false;
         }
         for (int v = 0; v < G.V(); v++) {
-                    dijkstraCounter++;
+            dijkstraCounter++;
 
             if (v == s) {
                 continue;
@@ -170,7 +169,7 @@ public class Dijkstra {
 
         // check that all edges e = v->w satisfy distTo[w] <= distTo[v] + e.weight()
         for (int v = 0; v < G.V(); v++) {
-                    dijkstraCounter++;
+            dijkstraCounter++;
 
             for (DirectedEdge e : G.adj(v)) {
                 int w = e.to();
@@ -183,7 +182,7 @@ public class Dijkstra {
 
         // check that all edges e = v->w on SPT satisfy distTo[w] == distTo[v] + e.weight()
         for (int w = 0; w < G.V(); w++) {
-                    dijkstraCounter++;
+            dijkstraCounter++;
 
             if (edgeTo[w] == null) {
                 continue;
