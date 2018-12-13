@@ -2,7 +2,6 @@ package nl.hva.ict.ss.pathfinding.weigthedgraph;
 
 import java.util.Stack;
 
-
 /**
  * The <tt>EdgeWeightedDirectedCycle</tt> class represents a data type for
  * determining whether an edge-weighted digraph has a directed cycle. The
@@ -20,12 +19,12 @@ import java.util.Stack;
  * <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
  *
  * Overgenomen uit de library algs4-package.jar van Robert Sedgwick
- * 
+ *
  * @author Robert Sedgewick
  * @author Kevin Wayne
  * @author Eric Ravestein
  * @author Nico Tromp
-*/
+ */
 public class EdgeWeightedDirectedCycle {
 
     private final boolean[] marked;             // marked[v] = has vertex v been marked?

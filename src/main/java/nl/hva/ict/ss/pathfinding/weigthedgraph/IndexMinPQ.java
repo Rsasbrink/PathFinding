@@ -27,7 +27,7 @@ import java.util.NoSuchElementException;
  * <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
  *
  * Overgenomen uit de library algs4-package.jar van Robert Sedgwick
- * 
+ *
  * @author Robert Sedgewick
  * @author Kevin Wayne
  * @author Eric Ravestein
@@ -99,8 +99,8 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
      * @param i an index
      * @param key the key to associate with index i
      * @throws java.lang.IndexOutOfBoundsException unless 0 &le; i &lt; NMAX
-     *         java.util.IllegalArgumentException if there already is an item
-     * associated with index i
+     * java.util.IllegalArgumentException if there already is an item associated
+     * with index i
      */
     public void insert(int i, Key key) {
         if (i < 0 || i >= NMAX) {

@@ -12,10 +12,11 @@ import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
 /**
- * TileWorldUtil is a utility class for reading, writing and drawing tile worlds. A
- * tile world is represented in two ways. First, by a file (bitmap image with
- * different colors). Second, by an array of tile types. The array is hidden for
- * other classes. This class is inspired by a previous version by Gerke de Boer.
+ * TileWorldUtil is a utility class for reading, writing and drawing tile
+ * worlds. A tile world is represented in two ways. First, by a file (bitmap
+ * image with different colors). Second, by an array of tile types. The array is
+ * hidden for other classes. This class is inspired by a previous version by
+ * Gerke de Boer.
  *
  * @author Dennis Breuker
  * @author Nico Tromp
@@ -217,7 +218,7 @@ public class TileWorldUtil implements TileWorld {
      */
     private void writeImage(BufferedImage image, String fileName) {
         try {
-			File outputFile = new File(fileName + "." + FILE_EXTENSION);
+            File outputFile = new File(fileName + "." + FILE_EXTENSION);
             ImageIO.write(image, FILE_EXTENSION, outputFile);
 
         } catch (IOException ioexp) {
