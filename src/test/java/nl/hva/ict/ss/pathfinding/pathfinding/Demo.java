@@ -9,9 +9,9 @@ public class Demo {
     @Test
     public void test() {
         // Make sure that it is writeable and we know where to look for it
-        TileWorldUtil.outputDir = "/C:/Users/rsasb/Desktop/StackStorage/HvA/Sorting & Searching/PO2/PathFinding/src/main/resources/output/";
+        TileWorldUtil.outputDir = "/Users/rowanvi/Desktop/Project/School/Sorting/PathFinding/Images/";
         System.out.printf("ID;Length Dijkstra;Length Floyd;Costs Dijkstra; Costs Floyd\n");
-        for (int i = 1; i <= 22; i++) {
+        for (int i = 1; i <= 1; i++) {
             // Read the graph directly from a image
             EdgeWeightedDigraph graafDijkstra = new EdgeWeightedDigraph("i" + i);
             // Get the start and end node
@@ -25,6 +25,7 @@ public class Demo {
                 graafDijkstra.tekenPad(dijkstra.pathTo(finish));
                 // Save it
                 graafDijkstra.save("i" + i + "-dijkstra");
+                System.out.println(dijkstra.getDijkstraCounter());
             }
 
             // Run Floyd-Warshall

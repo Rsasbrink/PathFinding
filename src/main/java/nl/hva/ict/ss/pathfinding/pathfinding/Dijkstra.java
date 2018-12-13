@@ -32,6 +32,7 @@ public class Dijkstra {
     private double[] distTo;          // distTo[v] = distance  of shortest s->v path
     private DirectedEdge[] edgeTo;    // edgeTo[v] = last edge on shortest s->v path
     private IndexMinPQ<Double> pq;    // priority queue of vertices
+    private int dijkstraCounter = 0;
 
     /**
      * Computes a shortest paths tree from <tt>s</tt> to every other vertex in
@@ -75,6 +76,8 @@ public class Dijkstra {
     private void relax(DirectedEdge e) {
         int v = e.from(), w = e.to();
         if (distTo[w] > distTo[v] + e.weight()) {
+                    dijkstraCounter++;
+
             distTo[w] = distTo[v] + e.weight();
             edgeTo[w] = e;
             if (pq.contains(w)) {
@@ -97,7 +100,9 @@ public class Dijkstra {
     public double distTo(int v) {
         return distTo[v];
     }
-
+    public int getDijkstraCounter() {
+        return dijkstraCounter;
+    }
     /**
      * Is there a path from the source vertex <tt>s</tt> to vertex <tt>v</tt>?
      *
@@ -136,6 +141,8 @@ public class Dijkstra {
 
         // check that edge weights are nonnegative
         for (DirectedEdge e : G.edges()) {
+                    dijkstraCounter++;
+
             if (e.weight() < 0) {
                 System.err.println("negative edge weight detected");
                 return false;
@@ -144,10 +151,14 @@ public class Dijkstra {
 
         // check that distTo[v] and edgeTo[v] are consistent
         if (distTo[s] != 0.0 || edgeTo[s] != null) {
+                    dijkstraCounter++;
+
             System.err.println("distTo[s] and edgeTo[s] inconsistent");
             return false;
         }
         for (int v = 0; v < G.V(); v++) {
+                    dijkstraCounter++;
+
             if (v == s) {
                 continue;
             }
@@ -159,6 +170,8 @@ public class Dijkstra {
 
         // check that all edges e = v->w satisfy distTo[w] <= distTo[v] + e.weight()
         for (int v = 0; v < G.V(); v++) {
+                    dijkstraCounter++;
+
             for (DirectedEdge e : G.adj(v)) {
                 int w = e.to();
                 if (distTo[v] + e.weight() < distTo[w]) {
@@ -170,6 +183,8 @@ public class Dijkstra {
 
         // check that all edges e = v->w on SPT satisfy distTo[w] == distTo[v] + e.weight()
         for (int w = 0; w < G.V(); w++) {
+                    dijkstraCounter++;
+
             if (edgeTo[w] == null) {
                 continue;
             }
