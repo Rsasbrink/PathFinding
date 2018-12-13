@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: nl.hva.ict.ss.pathfinding.pathfinding.Demo
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.247 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.768 sec

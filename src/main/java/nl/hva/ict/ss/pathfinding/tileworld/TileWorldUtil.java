@@ -249,7 +249,7 @@ public class TileWorldUtil implements TileWorld {
                 int index = twoDimIndexToOneDimIndex(x, y);
                 tileWorld[x][y] = TileType.rgbColorToTile(rgbWorld[index]);
                 if (tileWorld[x][y] == TileType.UNKNOWN) {
-                    System.err.println("Location: " + index + " (" + x + "," + y + ")");
+                    System.err.println("Locaetion: " + index + " (" + x + "," + y + ")");
                 }
             }
         }

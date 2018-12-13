@@ -11,7 +11,7 @@ public class Demo {
         // Make sure that it is writeable and we know where to look for it
         TileWorldUtil.outputDir = "/Users/rowanvi/Desktop/Project/School/Sorting/PathFinding/Images/";
         System.out.printf("ID;Length Dijkstra;Length Floyd;Costs Dijkstra; Costs Floyd\n");
-        for (int i = 1; i <= 1; i++) {
+        for (int i = 20; i <= 22; i++) {
             // Read the graph directly from a image
             EdgeWeightedDigraph graafDijkstra = new EdgeWeightedDigraph("i" + i);
             // Get the start and end node
